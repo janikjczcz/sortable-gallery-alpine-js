@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sortable Gallery with AlpineJS | Jaroslav Janik</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link>
+</head>
+<body>
+<section class="gallery" x-data="{ tab: 'all' }">
+  <div class="sort">
+    <ul class="sort-links">
+      <li class="link-item">
+        <a href="#" @click.prevent="tab = 'all'" :class="{ 'active' : tab === 'all' }">All</a>
+      </li>
+      <li class="link-item">
+        <a href="#" @click.prevent="tab = 'cats'" :class="{ 'active' : tab === 'cats' }">Cats</a>
+      </li>
+      <li class="link-item">
+        <a href="#" @click.prevent="tab = 'dogs'" :class="{ 'active' : tab === 'dogs' }">Dogs</a>
+      </li>
+    </ul>
+  </div>
+  <div class="images">
+    <div class="singleImg" x-show="tab === 'cats' || tab === 'all'"><img src="https://images.unsplash.com/photo-1560114928-40f1f1eb26a0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjc5NjV9&auto=format&fit=crop&w=300&q=80" alt="Running Kitty" title="Running Kitty"></div>
+    <div class="singleImg" x-show="tab === 'dogs' || tab === 'all'"><img src="https://images.unsplash.com/photo-1518914781460-a3ada465edec?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Tiny puppy" title="Tiny puppy"></div>
+    <div class="singleImg" x-show="tab === 'cats' || tab === 'all'"><img src="https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="Shocked Kitty" title="Shocked Kitty"></div>
+    <div class="singleImg" x-show="tab === 'dogs' || tab === 'all'"><img src="https://images.unsplash.com/photo-1550948537-130a1ce83314?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="Jumping puppy" title="Jumping puppy"></div>
+    <div class="singleImg" x-show="tab === 'cats' || tab === 'all'"><img src="https://images.unsplash.com/photo-1487300001871-12053913095d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80" alt="Sleeping Kitty" title="Sleeping Kitty"></div>
+    <div class="singleImg" x-show="tab === 'dogs' || tab === 'all'"><img src="https://images.unsplash.com/photo-1529906920574-628dc1e49f5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=300&q=80" alt="Happy Puppy" title="Happy Puppy"></div>
+  </div>
+</section>
+
+
+
+<!-- AlpineJS -->
+<script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.js" defer></script>
+</body>
+
+</html>
